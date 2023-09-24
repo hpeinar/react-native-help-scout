@@ -1,6 +1,4 @@
 {
-	"name": "@sibs-app/react-native-help-scout",
-	"version": "1.0.0",
 	"workspaces": {
 		"packages": [
 			"example",
