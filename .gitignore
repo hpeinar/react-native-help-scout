@@ -61,7 +61,5 @@ buck-out/
 
 Pods/
 
-dist/
-
 library/README.md
 library/LICENSE

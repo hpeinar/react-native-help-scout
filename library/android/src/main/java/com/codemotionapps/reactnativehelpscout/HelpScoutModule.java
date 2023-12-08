@@ -42,8 +42,7 @@ public class HelpScoutModule extends ReactContextBaseJavaModule {
 								.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
 								.emit("close", null);
 					}
-				}
-		);
+				});
 
 		Application application = (Application) reactContext.getApplicationContext();
 		application.registerActivityLifecycleCallbacks(eventLifecycleHandler);
@@ -62,12 +61,8 @@ public class HelpScoutModule extends ReactContextBaseJavaModule {
 	}
 
 	@ReactMethod
-	public void open(String signature) {
-		if(signature){
-			BeaconActivity.openInSecureMode(context, signature);
-		}else{
-			BeaconActivity.open(reactContext);
-		}
+	public void open() {
+		BeaconActivity.open(reactContext);
 	}
 
 	@ReactMethod
@@ -84,7 +79,8 @@ public class HelpScoutModule extends ReactContextBaseJavaModule {
 		while (i.hasNext()) {
 			Map.Entry<String, Object> entry = i.next();
 			String key = entry.getKey();
-			if (key == "email" || key == "name") continue;
+			if (key == "email" || key == "name")
+				continue;
 			Beacon.addAttributeWithKey(key, (String) entry.getValue());
 		}
 	}
@@ -123,10 +119,11 @@ public class HelpScoutModule extends ReactContextBaseJavaModule {
 		BeaconActivity.open(this.reactContext, BeaconScreens.CONTACT_FORM_SCREEN, new ArrayList<String>());
 	}
 
-//	@ReactMethod
-//	public void chat() {
-//		BeaconActivity.open(this.reactContext, BeaconScreens.CHAT, new ArrayList<String>());
-//	}
+	// @ReactMethod
+	// public void chat() {
+	// BeaconActivity.open(this.reactContext, BeaconScreens.CHAT, new
+	// ArrayList<String>());
+	// }
 
 	@ReactMethod
 	public void dismiss(Callback callback) {
