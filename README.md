@@ -1,0 +1,1 @@
+Compatible with expo.dev as well but might need some modifications depending on other plugins used

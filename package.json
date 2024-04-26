@@ -1,5 +1,5 @@
 {
-	"name": "@sibs-app/react-native-help-scout",
+	"name": "@hpeinar/react-native-help-scout",
 	"version": "1.0.8",
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",
