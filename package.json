@@ -1,6 +1,6 @@
 {
 	"name": "@hpeinar/react-native-help-scout",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",
 	"repository": "git@github.com:codemotionapps/react-native-help-scout.git",
