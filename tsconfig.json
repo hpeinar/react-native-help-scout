@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"incremental": true,
+		"sourceMap": true,
+		"outDir": "./dist",
+		"baseUrl": ".",
+		"paths": {
+			"react": [
+				"../example/node_modules/react"
+			],
+			"react-native": [
+				"../example/node_modules/react-native"
+			]
+		},
+		"skipLibCheck": true
+	},
+	"include": [
+		"./src"
+	],
+}

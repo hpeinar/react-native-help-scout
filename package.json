@@ -1,29 +1,37 @@
 {
-	"workspaces": {
-		"packages": [
-			"example",
-			"library"
-		],
-		"nohoist": [
-			"**/react-native",
-			"**/react-native/**",
-			"**/react-native-dotenv",
-			"**/react-native-dotenv/**",
-			"**/react",
-			"**/react/**"
-		]
-	},
+	"name": "@sibs-app/react-native-help-scout",
+	"version": "1.0.8",
+	"main": "./dist/index.js",
+	"typings": "./dist/index.d.ts",
+	"repository": "git@github.com:codemotionapps/react-native-help-scout.git",
+	"author": "Dimitar Nestorov <opensource@dimitarnestorov.com> (https://dimitarnestorov.com)",
+	"homepage": "https://github.com/codemotionapps/react-native-help-scout",
+	"description": "Help Scout's Beacon for React Native",
+	"license": "MIT",
 	"scripts": {
-		"example": "yarn workspace example",
-		"library": "yarn workspace library"
+		"prepublishOnly": "yarn run clean && yarn run copy-readme && yarn run copy-license && yarn run build",
+		"clean": "rimraf dist",
+		"copy-readme": "cp ../README.md ./",
+		"copy-license": "cp ../LICENSE ./",
+		"build": "tsc",
+		"watch": "yarn run build --watch"
 	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-native": "^0.73.6"
+	},
+	"dependencies": {
+		"@types/events": "3.0.0",
+		"@types/react": "~18.2.45",
+		"events": "^3.0.0"
+	},
+	"keywords": [
+		"react",
+		"react native",
+		"help scout",
+		"help scout beacon"
+	],
 	"devDependencies": {
-		"@babel/core": "^7.6.0",
-		"@babel/runtime": "^7.6.0",
-		"babel-plugin-module-resolver": "^3.2.0",
-		"metro-react-native-babel-preset": "0.54.1",
-		"rimraf": "^3.0.0",
-		"typescript": "^3.6.3"
-	},
-	"private": true
+		"typescript": "^5.4.5"
+	}
 }
