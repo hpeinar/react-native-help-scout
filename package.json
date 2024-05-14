@@ -1,6 +1,6 @@
 {
 	"name": "@hpeinar/react-native-help-scout",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",
 	"repository": "git@github.com:codemotionapps/react-native-help-scout.git",
@@ -18,7 +18,7 @@
 	},
 	"peerDependencies": {
 		"react": "^18.2.0",
-		"react-native": "^0.73.6"
+		"react-native": "^0.74.1"
 	},
 	"dependencies": {
 		"@types/events": "3.0.0",
